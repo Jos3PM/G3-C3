@@ -1,6 +1,5 @@
 package upeu.edu.pe.ExamU2.controllers;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,20 +23,20 @@ public class ActivitiesController {
 
     @GetMapping("/nuevo")
     public String nuevo(Model model) {
-        model.addAttribute("activities", new Activities());
+        model.addAttribute("activity", new Activities());
         model.addAttribute("statuses", Status.values());
         return "activities/form";
     }
 
     @PostMapping("/guardar")
-    public String guardar(Activities activities) {
-        service.guardar(activities);
+    public String guardar(@ModelAttribute Activities activity) {
+        service.guardar(activity);
         return "redirect:/activities/listar";
     }
 
     @GetMapping("/editar/{id}")
     public String editar(@PathVariable Integer id, Model model) {
-        model .addAttribute("activities", service.buscar(id));
+        model.addAttribute("activity", service.buscar(id));
         model.addAttribute("statuses", Status.values());
         return "activities/form";
     }
@@ -47,5 +46,4 @@ public class ActivitiesController {
         service.eliminar(id);
         return "redirect:/activities/listar";
     }
-
 }

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "activities")
+@Table(name = "activitys")
 @Data
 public class Activities {
 
@@ -12,8 +12,10 @@ public class Activities {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(length = 45)
     private String name;
 
+    @Column(length = 45)
     private String datetime;
 
     private Boolean published;

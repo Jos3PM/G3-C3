@@ -1,12 +1,14 @@
 package upeu.edu.pe.ExamU2.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import upeu.edu.pe.ExamU2.models.Activities;
 import upeu.edu.pe.ExamU2.repository.ActivitiesRepository;
 
 import java.util.List;
 
-public class ActivitiesServiceImpl  implements ActivitiesService{
+@Service
+public class ActivitiesServiceImpl implements ActivitiesService {
 
     @Autowired
     private ActivitiesRepository repository;
