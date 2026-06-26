@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+body{
+    background-color: black;
+}
+h1{
+    border: 1px blue solid;
+    color: cornflowerblue;
+    background-color: #1dd8cc;
+    text-align: center;
+    text-shadow: 3px 3px 2px white;
+    margin-bottom: 20px;
+}
+.ajedrez{
+    border: 15px #440E03 solid;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.ajedrez td{
+    border: 1px white solid;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(78, 30, 30);
+    text-align: center;
+}
+.ajedrez tr:nth-child(odd) td:nth-child(odd){
+    background-color: yellow;
+}
+.ajedrez tr:nth-child(even) td:nth-child(even){
+    background-color: yellow;
+}
+
+.tabla1,tr,td,th{
+    margin: 0 auto;
+    border: 1px white solid;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 50px;
+}
+
+.horario{
+    margin: 0 auto;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.horario tr{
+    border: 1px purple solid;
+    color: white;
+}
+.horario td{
+    border: 1px purple solid;
+    color: white;
+}
+.horario th{
+    border: purple solid;
+}
